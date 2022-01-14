@@ -1,0 +1,51 @@
+.slider
+  position: relative
+  line-height: 0
+
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 4rem 2rem
+    position: absolute
+    width: 100%
+
+    &-hamburger
+      cursor: pointer
+      z-index: 3
+
+  &__img
+    width: 100%
+
+
+.hidden
+  visibility: hidden
+
+.active
+  display: flex
+  height: 10%
+  padding: 5rem 4rem
+  position: fixed
+  visibility: unset
+  transform: translateX(100px)
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 2
+
+  &::before
+    background: $white 
+    content: ""
+    height: 100%
+    width: 100%
+    position: absolute
+    left: -100px
+    top: 0
+    z-index: -1
+
+  & li
+    margin: 0 2rem
+
+  & li a
+    color: $black
+    font-weight: bold

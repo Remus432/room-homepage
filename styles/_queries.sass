@@ -1,0 +1,62 @@
+@media (min-width: 900px) 
+  .col
+    display: flex
+    align-items: center
+
+  .arrows
+    right: -10.7rem
+
+  .slider
+    flex: 7
+
+    &__nav
+      width: 40%
+
+      &-hamburger
+        display: none
+
+      &-menu
+        display: flex
+        justify-content: space-between
+        margin-left: 5rem
+        visibility: unset
+        width: 100%
+
+        &-item
+          list-style: none
+
+          &-link
+            color: #fff
+            cursor: pointer
+            text-decoration: none
+            padding-bottom: 1rem
+            position: relative
+            
+
+            &:hover::before
+              width: 100%
+
+            &::before
+              background: $white
+              content: ""
+              position: absolute
+              bottom: 0
+              left: 50%
+              transform: translateX(-50%)
+              height: 2px
+              width: 0
+              transition: .5s all ease-in-out
+
+  .header
+    flex: 4
+
+    &__btn
+
+      &:hover
+        color: lighten($very-dark-gray, 20%)
+
+  .about
+    display: flex
+    justify-content: space-between
+    grid-area: "about"
+    width: 100%
